@@ -335,4 +335,50 @@
     background:rgba(0,0,0,0.05);
 }
 
+.header__list-description{
+    height: 240px;
+    background-color: black;
+    display: flex;
+}
+
+.header__list-description__box{
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.header__list-description__box__img{
+    height: 100%;
+    width: 100%;
+}
+
+.header__list-description__box__text{
+    z-index: 1;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color:white;
+}
+.header__box1{
+}
+
+.header__box2{
+
+}
+
+.header__box3{
+
+}
+
+.header__box4{
+
+}
+
+.header__box5{
+
+}
+
+
 
