@@ -145,7 +145,7 @@
 
 .header__bottom{
     height: 25%;
-    background-color: #152332;
+    background-image: linear-gradient(0,#152332,#283747);
 }
 
 .header__category{
@@ -170,9 +170,11 @@
     padding: 0 15px;
     position: relative;
 }
+
 .header__category-item:hover  .header__category-item__list{
     display:block;
 }
+
 .header__category-item:not(.header__category-item--current):hover{
     background:rgba(255,255,255,0.1);
 }
@@ -212,8 +214,12 @@
     border-top:3px solid #47a025;
     box-shadow: 0 0 15px rgba(0,0,0,.25);
     display:none;
-    animation:fadeIn 0.15s;
+    animation:fadeIn 0.3s;
     transform-origin: top;
+}
+
+.fa-chevron-right{
+    font-size: 12px;
 }
 @keyframes fadeIn{
     from {
@@ -254,22 +260,79 @@
 .header__category-nation__item{
     padding: 8px 5px;
     display:flex;
-   align-items: center;
+    align-items: center;
     justify-content:flex-end;
     
 }
+
 .header__category-nation__item:hover{
     background:rgb(204, 204, 204);
 }
+
 .header__category-nation__item:hover .header__category-nation__item__text{
     color:#47a025;
 }
+
 .header__category-nation__item__img{
     width: 19px;
     height: 14px;
     margin:0 10px 0 5px;
 }
+
 .header__category-nation__item__text{
     color:#444;
     
 }
+
+.category--elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8px;
+    position: relative;
+}
+
+.header__category-item__list-item__content__child{
+    padding: 0;
+    list-style: none;
+    width: 190px;
+    margin:0;
+    color:#444;
+    border-top:3px solid #47a025;
+    box-shadow: 0 0 2px rgba(0,0,0,.1);
+    animation:fadeIn 0.3s;
+    transform-origin: top;
+    display: none;
+    font-size: 16px;
+}
+
+.header__possition-element-top{
+    position: absolute;
+    top:-4%;
+    left:100%;
+}
+
+.header__possition-element-bottom{
+    position: absolute;
+    top:48%;
+    left:100%;
+}
+
+.header__category-item__list-item__content__child-item{
+    padding-left: 10px;
+}
+
+.header__category-item__list-item:hover .header__category-item__list-item__content__child{
+    display: block;
+}
+
+.header__category-item__list-item__content__child-item:not(:last-child){
+    border-bottom: 1px solid #d7d7d7
+}
+
+.header__category-item__list-item__content__child-item:hover{
+    color:#47a025;
+    background:rgba(0,0,0,0.05);
+}
+
+
