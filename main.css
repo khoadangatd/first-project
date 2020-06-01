@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .header{
     height: 168px;
 }
@@ -339,17 +342,19 @@
     height: 240px;
     background-color: black;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .header__list-description__box{
-    width: 25%;
+    width: 20%;
     height: 100%;
     position: relative;
+    cursor: pointer;
 }
 
 .header__list-description__box__img{
     height: 100%;
-    width: 100%;
+
 }
 
 .header__list-description__box__text{
@@ -359,26 +364,52 @@
     bottom: 20px;
     font-size: 22px;
     font-weight: 700;
+    text-align: center;
     color:white;
 }
-.header__box1{
+.header__list-description__box__first{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    transition: all 0.4s;
 }
-
-.header__box2{
-
+.header__list-description__box__last{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    top:0;
+    left:0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
 }
-
-.header__box3{
-
+.header__list-description__box__content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 18px;
+    color:white;
+    padding: 0 20px;
 }
-
-.header__box4{
-
+.header__list-description__box__overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    opacity: 0.6;
 }
-
-.header__box5{
-
+.header__list-description__box:hover .header__list-description__box__first{
+    transform: translateY(-30px);
+    opacity: 0;
 }
-
-
-
+.header__list-description__box:hover .header__list-description__box__last{
+    transform: translateY(-40px);
+    opacity: 1;
+}
+.header__list-description__box:hover .header__list-description__box__overlay{
+    opacity: 0.8;
+}
