@@ -448,8 +448,7 @@
     transition: all 0.3s;
 }
 .header__download__btn:hover{
-    background-color: #39811e;
-    border-color: #35771b;
+    filter: brightness(80%);
 }
 
 .header__download__btn i {
@@ -464,6 +463,101 @@
     border-top-left-radius: 5px;
     text-align: center;
 }
+
 .header__video{
     width: 50%;
 }
+
+.header__slides{
+    width: 100%;
+    overflow: hidden;
+    height: 560px;
+    position: relative;
+}
+
+.header__slides__list{
+    padding: 0;
+    margin: 0;
+    width: 500%;
+    display: flex;
+    list-style: none;
+}
+
+.header__slides__list__item{
+    width: 20%;
+}
+
+.header__slides__list__item-img{
+
+}
+.btn{
+    background-color: #a4243b;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: white;
+    font-size: 18px;
+}
+.header__slides__list__item-desc{
+    height: 220px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 20px 115px;
+}
+
+.header__slides__list__item-desc__title{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.header__slides__list__item-desc__text{
+    width: 620px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.header__slides__list__btn--left{
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0,0,0,0.3);
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.hover-slide:hover{
+    background-color: rgb(0,0,0,0.8);
+}
+.hover-slide i{
+    color:white;
+}
+
+.hover-slide{
+    z-index: 1;
+}
+
+.header__slides__list__btn--right{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.3);
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+
