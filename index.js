@@ -27,11 +27,11 @@ slides.addEventListener("transitionend",function(){
     if(x==4)
     {
         slides.style.transition='none';
-        slides.style.transform=`translateX(${0}px)`;
-        x=slides.children.length-x;
+        x=1;
+        slides.style.transform=`translateX(${-width*x}px)`;
     }
     console.log(x);
 })
-// setInterval(turnRight,5000);
+setInterval(turnRight,5000);
 Btnright.addEventListener("click",turnRight);
 Btnleft.addEventListener("click",turnLeft);
