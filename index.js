@@ -1,47 +1,37 @@
 var Btnright=document.querySelector(".header__slides__list__btn--right");
 var Btnleft=document.querySelector(".header__slides__list__btn--left");
-var x=0;
+var x=1;
 var slides=document.querySelector(".header__slides__list");
 var desc=document.querySelectorAll(".header__slides__list__item-desc");
+var width=slides.firstElementChild.clientWidth;
 function turnLeft(){   
-    if(x==0)
-        x=3;
-    slides.style.transform = `translateX(${-100/3*(x-1)}%)`;
-    desc[x-1].animate(
-    [{
-        transform: 'scaleY(0.85)',  
-        opacity:'0',
-    }
-    ,{
-        transform: 'scaleY(1)',
-        opacity:'1' ,
-    }]
-    ,
-    {
-    duration: 1000,
-    });
+    slides.style.transition="all 0.5s";
     x--;
+    slides.style.transform=`translateX(${-width*x}px)`;
 }
 function turnRight(){
-    if(x==2){
-        x=-1;
-    }
-    slides.style.transform=`translateX(${(-100/3*(x+1))}%)`;
-    desc[x+1].animate(
-        [{
-            transform: 'scaleY(0.85)',  
-            opacity: '0'   
-        }
-        ,{
-            transform: 'scaleY(1)',
-            opacity: '1'
-        }]
-        ,
-        {
-        duration: 1000,
-        });
+    slides.style.transition="all 0.5s";
     x++;
+    slides.style.transform=`translateX(${-width*x}px)`;
 }
+slides.addEventListener("transitionend",function(){
+    console.log(x);
+    if(x==0)
+    {
+    
+        slides.style.transition='none';
+        x=slides.children.length-2;
+        slides.style.transform=`translateX(${-width*x}px)`;
+    }
+    
+    if(x==4)
+    {
+        slides.style.transition='none';
+        slides.style.transform=`translateX(${0}px)`;
+        x=slides.children.length-x;
+    }
+    console.log(x);
+})
 // setInterval(turnRight,5000);
 Btnright.addEventListener("click",turnRight);
 Btnleft.addEventListener("click",turnLeft);
