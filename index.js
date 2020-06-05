@@ -43,3 +43,15 @@ slides.addEventListener("transitionend",function(){
 //setInterval(turnRight,5000);
 Btnright.addEventListener("click",turnRight);
 Btnleft.addEventListener("click",turnLeft);
+
+// scroll top
+var iconFooter = document.querySelector(".footer__bot__icon");
+console.log(window);
+function iconScrollTop(){
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+iconFooter.addEventListener("click",iconScrollTop);
