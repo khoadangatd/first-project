@@ -200,7 +200,6 @@
 }
 .header__category-nation-icon{
     height: 12px;
-    object-fit: cover;
     margin: auto;
 }
 .header__category-item__list{
@@ -395,11 +394,13 @@
 }
 .header__list-description__box__content{
     position: absolute;
-    bottom: 10px;
+    text-align: center;
+    bottom: 20px;
     left: 10px;
     font-size: 18px;
     color:white;
-    padding: 0 20px;
+    padding: 0 10px;
+    line-height: 28px;
 }
 .header__list-description__box__overlay{
     position: absolute;
@@ -563,10 +564,6 @@
 }
 .hover-slide i{
     color:white;
-}
-
-.hover-slide{
-    z-index: 1;
 }
 
 .header__slides__list__btn--right{
@@ -1050,3 +1047,70 @@
     text-align: center;
 }
 
+/* Modal */
+.modal{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    display: flex;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.4);
+}
+
+.modal__body{
+    z-index: 2;
+    background-color: white;
+}
+
+.modal__search{
+  
+}
+
+.modal__search__quit{
+    cursor: pointer;
+}
+
+.modal__search__container{
+    display: flex;
+}
+
+.modal__search__input{
+    border:none;
+    border-bottom: 2px solid #757c84;
+}
+
+.modal__search__click{
+
+}
+
+.modal__search__circle{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position:absolute;
+    border-radius: 50%;
+    left:2px;
+    transition: all 0.2s;
+}
+
+.modal__search__color{
+    position: relative;
+    width: 60px;
+    height: 32px;
+    background-color: #47a025;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.modal__search__color:checked .modal__search__circle{
+    transform: translateX(80%);
+}
+.modal__search__color:{
+    background-color: #a4243b;
+}
